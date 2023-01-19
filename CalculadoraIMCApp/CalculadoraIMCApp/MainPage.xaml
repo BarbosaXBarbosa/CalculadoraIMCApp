@@ -5,16 +5,23 @@
 
     <StackLayout VerticalOptions="CenterAndExpand">
         <Label x:Name="lblTitulo"
-               Text="Calculadora de IMC"/>
-        <Label x:Name="lblAltura"
-               Text="Insira a altura:"/>
-        <Entry x:Name="txtAltura"
-               Placeholder="sua altura em metros"/>
-        <Label x:Name="lblPeso"
-               Text="Insira o peso:"/>
-        <Entry x:Name="txtPeso"
-               Placeholder="seu peso em kilogramas"/>
+               Text="Calculadora de IMC"
+               FontSize="Title"/>
         
+        <StackLayout>
+            <Label x:Name="lblAltura"
+               Text="Insira a altura:"/>
+            <Entry x:Name="txtAltura"
+               Placeholder="sua altura em metros"/>
+        </StackLayout>
+        
+        <StackLayout>
+            <Label x:Name="lblPeso"
+               Text="Insira o peso:"/>
+            <Entry x:Name="txtPeso"
+               Placeholder="seu peso em kilogramas"/>
+        </StackLayout>
+
         <StackLayout Orientation="Horizontal"
                      HorizontalOptions="CenterAndExpand"
                      Padding="8"

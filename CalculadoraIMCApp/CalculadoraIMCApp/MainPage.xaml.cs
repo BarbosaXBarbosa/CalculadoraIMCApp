@@ -35,17 +35,14 @@ namespace CalculadoraIMCApp
             }else
             {
                 double imc = CalcularIMC(altura, peso);
-                ExibirAlert(imc);
+                Navigation.PushAsync(new ImcPage(imc));
                 IniciarCampos();
             }
 
         }
 
         private void IniciarCampos()
-        {
-            txtAltura.Text = "0.00";
-            txtPeso.Text = "0.00";
-            
+        {     
             txtAltura.VerticalTextAlignment = TextAlignment.End;
             txtPeso.VerticalTextAlignment = TextAlignment.End;
             txtAltura.Focus();
@@ -57,10 +54,6 @@ namespace CalculadoraIMCApp
             return imc;
         }
 
-        private void ExibirAlert(double imc)
-        {
-            string msg = $"O seu imc é de {imc.ToString()}";
-            DisplayAlert("Resultado do imc", msg, "Ok");
-        }
+
     }
 }
