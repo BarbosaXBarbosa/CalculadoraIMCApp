@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CalculadoraIMCApp.MainPage">
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Label x:Name="lblTitulo"
+               Text="Calculadora de IMC"/>
+        <Label x:Name="lblAltura"
+               Text="Insira a altura:"/>
+        <Entry x:Name="txtAltura"
+               Placeholder="sua altura em metros"/>
+        <Label x:Name="lblPeso"
+               Text="Insira o peso:"/>
+        <Entry x:Name="txtPeso"
+               Placeholder="seu peso em kilogramas"/>
+        
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     Padding="8"
+                     BackgroundColor="Gray">
+            <Button x:Name="btnCancelar"
+                    Text="Cancelar"
+                    Clicked="btnCancelar_Clicked"/>
+            <Button x:Name="btnCalcular"
+                    Text="Calcular"
+                    Clicked="btnCalcular_Clicked"/>
+        </StackLayout>
+
+        <Label x:Name="lblResultado"/>
+
+    </StackLayout>
+
+</ContentPage>
